@@ -1,5 +1,9 @@
 #include<stdio.h>
-
+/**
+ *
+ * main - function with int return
+ *
+ */
 int main(void)
 
 {
