@@ -1,21 +1,22 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 /**
- * main - function to print samll and capital letters
+ * main - Prints the alphabet without q and e.
  *
- * Return: zero when successful
+ * Return: 0 when successful
  */
 int main(void)
+
 {
-	char alphabet[52] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
-	for (i = 0; i < 52; i++)
+	for (i = 97; i < 123; i++)
 	{
-		if (alphabet[i] != 'e' && alphabet[i] != 'q')
-		{
-			putchar(alphabet[i]);
-		}
+	if (i != 101 && i != 113)
+	{
+		putchar(i);
+	}
 	}
 	putchar('\n');
 	return (0);
