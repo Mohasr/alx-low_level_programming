@@ -20,16 +20,16 @@ while (l < 58)
 			i = 48;
 			while (i < 58)
 			{
-				d1 = (l * 10) + j;
+				d1 = (l * 10) + k;
 				d2 = (j * 10) + i;
 				if (d1 < d2)
 				{
 					putchar(l);
-					putchar(j);
+					putchar(k);
 					putchar(' ');
 					putchar(j);
 					putchar(i);
-					if (l == 57 && j == 56 && j == 57 && i == 57)
+					if (l == 57 && k == 56 && j == 57 && i == 57)
 						break;
 					putchar(',');
 					putchar(' ');
