@@ -17,7 +17,7 @@ int main(void)
 	printf("%ld, %ld", n1, n2);
 	for (c = 0; c < 96; c++)
 	{
-		if (b)
+		if (b1)
 		{
 			fn = n1 + n2;
 			printf(", %ld", fn);
