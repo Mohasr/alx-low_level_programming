@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - fun that returns a pointer to a 2 dimension array of int.
+ * alloc_grid - function that returns a pointer to a 2
+ * dimensional array of integers.
  * @width: width of the array.
  * @height: height of the array.
  *
@@ -17,10 +18,22 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	twodarry = malloc(height * sizeof(int *));
+	if (twodarry == NULL)
+	{
+		free(twodarry);
+		return (NULL);
+	}
 
 	for (i = 0; i < height; i++)
 	{
 		twodarry[i] = malloc(width * sizeof(int));
+		if (twodarry[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(twodarry[i]);
+			free(twodarry);
+			return (NULL);
+		}
 	}
 
 	for (i = 0; i < height; i++)
